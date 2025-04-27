@@ -1,20 +1,15 @@
 <?php
 include 'calculate_score.php';
+include 'get_advice.php';
+include 'save_history.php';
 
 list($score, $scores) = calculateScore($_POST);
 
 $categories = json_decode(file_get_contents('categories.json'), true);
-$advices = json_decode(file_get_contents('advices.json'), true);
+list($level, $advice) = getAdvice($score);
 
-$level = "";
-$advice = "";
-foreach ($advices as $a) {
-    if ($score >= $a['min'] && $score <= $a['max']) {
-        $level = $a['level'];
-        $advice = $a['advice'];
-        break;
-    }
-}
+// Lưu lịch sử
+saveHistory($score, $level, $advice, $scores);
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +28,7 @@ foreach ($advices as $a) {
     <p><strong>Tổng điểm:</strong> <?= htmlspecialchars($score) ?></p>
     <p><strong>Khuyến nghị:</strong> <?= htmlspecialchars($advice) ?></p>
     <a href="index.php" class="btn-back">Làm lại khảo sát</a>
+    <a href="history.php" class="btn-history">Xem lịch sử khảo sát</a> <!-- Nút xem lịch sử -->
   </div>
 
   <h3>Biểu đồ mức độ ảnh hưởng theo từng yếu tố:</h3>
