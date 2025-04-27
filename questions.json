@@ -1,77 +1,75 @@
-{
-    "questions": [
-      {
-        "id": "q1",
-        "question": "Bạn làm việc trung bình bao nhiêu giờ mỗi ngày?",
-        "options": [
-          {"value": "under8", "label": "Dưới 8 giờ"},
-          {"value": "8to10", "label": "8-10 giờ"},
-          {"value": "over10", "label": "Trên 10 giờ"}
-        ]
-      },
-      {
-        "id": "q2",
-        "question": "Chất lượng giấc ngủ của bạn như thế nào?",
-        "options": [
-          {"value": "good", "label": "Ngủ sâu, đủ giấc"},
-          {"value": "average", "label": "Bình thường"},
-          {"value": "poor", "label": "Khó ngủ, hay tỉnh giấc"}
-        ]
-      },
-      {
-        "id": "q3",
-        "question": "Khối lượng công việc bạn đang đảm nhiệm?",
-        "options": [
-          {"value": "low", "label": "Thấp"},
-          {"value": "medium", "label": "Vừa phải"},
-          {"value": "high", "label": "Cao, quá tải"}
-        ]
-      },
-      {
-        "id": "q4",
-        "question": "Bạn có thường xuyên vận động thể chất?",
-        "options": [
-          {"value": "yes", "label": "Có"},
-          {"value": "rarely", "label": "Thỉnh thoảng"},
-          {"value": "no", "label": "Không bao giờ"}
-        ]
-      },
-      {
-        "id": "q5",
-        "question": "Bạn có cảm thấy lo âu hoặc căng thẳng kéo dài?",
-        "options": [
-          {"value": "no", "label": "Không"},
-          {"value": "medium", "label": "Thỉnh thoảng"},
-          {"value": "high", "label": "Thường xuyên"}
-        ]
-      },
-      {
-        "id": "q6",
-        "question": "Mối quan hệ với đồng nghiệp và cấp trên của bạn như thế nào?",
-        "options": [
-          {"value": "good", "label": "Tốt"},
-          {"value": "normal", "label": "Bình thường"},
-          {"value": "conflict", "label": "Thường xảy ra mâu thuẫn"}
-        ]
-      },
-      {
-        "id": "q7",
-        "question": "Bạn có đang gặp áp lực về tài chính không?",
-        "options": [
-          {"value": "no", "label": "Không"},
-          {"value": "some", "label": "Ít"},
-          {"value": "often", "label": "Thường xuyên"}
-        ]
-      },
-      {
-        "id": "q8",
-        "question": "Bạn có cảm thấy mệt mỏi kéo dài không rõ lý do?",
-        "options": [
-          {"value": "no", "label": "Không"},
-          {"value": "sometimes", "label": "Thỉnh thoảng"},
-          {"value": "always", "label": "Luôn luôn"}
-        ]
+[
+    {
+      "label": "Bạn làm việc trung bình bao nhiêu giờ mỗi ngày?",
+      "name": "q1",
+      "options": {
+        "under8": "Dưới 8 giờ",
+        "8to10": "8-10 giờ",
+        "over10": "Trên 10 giờ"
       }
-    ]
-  }
+    },
+    {
+      "label": "Chất lượng giấc ngủ của bạn như thế nào?",
+      "name": "q2",
+      "options": {
+        "good": "Ngủ sâu, đủ giấc",
+        "average": "Bình thường",
+        "poor": "Khó ngủ, hay tỉnh giấc"
+      }
+    },
+    {
+      "label": "Khối lượng công việc bạn đang đảm nhiệm?",
+      "name": "q3",
+      "options": {
+        "low": "Thấp",
+        "medium": "Vừa phải",
+        "high": "Cao, quá tải"
+      }
+    },
+    {
+      "label": "Bạn có thường xuyên vận động thể chất?",
+      "name": "q4",
+      "options": {
+        "yes": "Có",
+        "rarely": "Thỉnh thoảng",
+        "no": "Không bao giờ"
+      }
+    },
+    {
+      "label": "Bạn có cảm thấy lo âu hoặc căng thẳng kéo dài?",
+      "name": "q5",
+      "options": {
+        "no": "Không",
+        "medium": "Thỉnh thoảng",
+        "high": "Thường xuyên"
+      }
+    },
+    {
+      "label": "Mối quan hệ với đồng nghiệp và cấp trên của bạn như thế nào?",
+      "name": "q6",
+      "options": {
+        "good": "Tốt",
+        "normal": "Bình thường",
+        "conflict": "Thường xảy ra mâu thuẫn"
+      }
+    },
+    {
+      "label": "Bạn có đang gặp áp lực về tài chính không?",
+      "name": "q7",
+      "options": {
+        "no": "Không",
+        "some": "Ít",
+        "often": "Thường xuyên"
+      }
+    },
+    {
+      "label": "Bạn có cảm thấy mệt mỏi kéo dài không rõ lý do?",
+      "name": "q8",
+      "options": {
+        "no": "Không",
+        "sometimes": "Thỉnh thoảng",
+        "always": "Luôn luôn"
+      }
+    }
+  ]
   

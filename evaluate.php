@@ -11,46 +11,23 @@
     <h2>Kết quả đánh giá mức độ stress</h2>
 
     <?php
-    $score = 0;
-    $categories = ['Giờ làm', 'Giấc ngủ', 'Tài chính', 'Thời gian nghỉ ngơi', 'Sức khỏe thể chất', 'Quan hệ xã hội', 'Công việc', 'Cảm xúc'];
-    $scores = [0, 0, 0, 0, 0, 0, 0, 0];
+    include 'calculate_score.php';
+    include 'advices.php';
 
-    // Tập luật (rule-based)
-    $mapping = json_decode(file_get_contents('rules.json'), true);
+    $result = calculateScore($_POST);
+    $score = $result['score'];
+    $scores = $result['scores'];
+    $categories = $result['categories'];
 
-    // Tính tổng điểm và điểm từng yếu tố
-    foreach ($mapping as $key => $values) {
-      $point = 0;
-      if (isset($_POST[$key]) && isset($values[$_POST[$key]])) {
-        $point = $values[$_POST[$key]];
-        $score += $point;
-      }
-      $index = intval(substr($key, 1)) - 1; // q1 -> 0, q2 -> 1, ...
-      $scores[$index] = $point;
-    }
-
-    // Suy luận theo ngưỡng điểm
-    $level = "";
-    $advice = "";
-    if ($score <= 4) {
-      $level = "Thấp";
-      $advice = "Bạn đang kiểm soát tốt công việc và sức khỏe tinh thần. Tiếp tục duy trì lịch trình ổn định, nghỉ ngơi đủ và duy trì các mối quan hệ xã hội tích cực.";
-    } elseif ($score <= 9) {
-      $level = "Trung bình";
-      $advice = "Bạn có dấu hiệu mệt mỏi hoặc áp lực nhẹ. Nên xem lại khối lượng công việc, đảm bảo giấc ngủ và dành thời gian thư giãn hợp lý mỗi ngày.";
-    } elseif ($score <= 14) {
-      $level = "Cao";
-      $advice = "Bạn đang gặp áp lực đáng kể. Hãy cân nhắc giảm tải công việc, chia sẻ vấn đề với người tin cậy và bắt đầu thực hành các phương pháp giảm stress (thiền, viết nhật ký, thể thao nhẹ…).";
-    } else {
-      $level = "Nguy hiểm";
-      $advice = "Mức độ stress của bạn đang ở mức nghiêm trọng và có thể ảnh hưởng tiêu cực tới sức khỏe tâm thần. Nên cân nhắc tìm đến sự hỗ trợ từ chuyên gia tâm lý hoặc bác sĩ.";
-    }
+    $adviceData = getAdvice($score);
+    $level = $adviceData['level'];
+    $advice = $adviceData['advice'];
     ?>
 
     <div class="result-box">
-      <h3>Mức độ stress: <?= $level ?></h3>
-      <p><strong>Tổng điểm:</strong> <?= $score ?> (theo thang điểm 0–19)</p>
-      <p><strong>Khuyến nghị:</strong> <?= $advice ?></p>
+      <h3>Mức độ stress: <?= htmlspecialchars($level) ?></h3>
+      <p><strong>Tổng điểm:</strong> <?= htmlspecialchars($score) ?></p>
+      <p><strong>Khuyến nghị:</strong> <?= htmlspecialchars($advice) ?></p>
       <a href="index.php" class="btn-back">Làm lại khảo sát</a>
     </div>
 
