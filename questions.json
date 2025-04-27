@@ -1,7 +1,7 @@
 [
     {
-      "label": "Bạn làm việc trung bình bao nhiêu giờ mỗi ngày?",
-      "name": "q1",
+      "id": "q1",
+      "question": "Bạn làm việc trung bình bao nhiêu giờ mỗi ngày?",
       "options": {
         "under8": "Dưới 8 giờ",
         "8to10": "8-10 giờ",
@@ -9,8 +9,8 @@
       }
     },
     {
-      "label": "Chất lượng giấc ngủ của bạn như thế nào?",
-      "name": "q2",
+      "id": "q2",
+      "question": "Chất lượng giấc ngủ của bạn như thế nào?",
       "options": {
         "good": "Ngủ sâu, đủ giấc",
         "average": "Bình thường",
@@ -18,8 +18,8 @@
       }
     },
     {
-      "label": "Khối lượng công việc bạn đang đảm nhiệm?",
-      "name": "q3",
+      "id": "q3",
+      "question": "Khối lượng công việc bạn đang đảm nhiệm?",
       "options": {
         "low": "Thấp",
         "medium": "Vừa phải",
@@ -27,8 +27,8 @@
       }
     },
     {
-      "label": "Bạn có thường xuyên vận động thể chất?",
-      "name": "q4",
+      "id": "q4",
+      "question": "Bạn có thường xuyên vận động thể chất?",
       "options": {
         "yes": "Có",
         "rarely": "Thỉnh thoảng",
@@ -36,8 +36,8 @@
       }
     },
     {
-      "label": "Bạn có cảm thấy lo âu hoặc căng thẳng kéo dài?",
-      "name": "q5",
+      "id": "q5",
+      "question": "Bạn có cảm thấy lo âu hoặc căng thẳng kéo dài?",
       "options": {
         "no": "Không",
         "medium": "Thỉnh thoảng",
@@ -45,8 +45,8 @@
       }
     },
     {
-      "label": "Mối quan hệ với đồng nghiệp và cấp trên của bạn như thế nào?",
-      "name": "q6",
+      "id": "q6",
+      "question": "Mối quan hệ với đồng nghiệp và cấp trên của bạn như thế nào?",
       "options": {
         "good": "Tốt",
         "normal": "Bình thường",
@@ -54,8 +54,8 @@
       }
     },
     {
-      "label": "Bạn có đang gặp áp lực về tài chính không?",
-      "name": "q7",
+      "id": "q7",
+      "question": "Bạn có đang gặp áp lực về tài chính không?",
       "options": {
         "no": "Không",
         "some": "Ít",
@@ -63,8 +63,8 @@
       }
     },
     {
-      "label": "Bạn có cảm thấy mệt mỏi kéo dài không rõ lý do?",
-      "name": "q8",
+      "id": "q8",
+      "question": "Bạn có cảm thấy mệt mỏi kéo dài không rõ lý do?",
       "options": {
         "no": "Không",
         "sometimes": "Thỉnh thoảng",

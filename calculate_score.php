@@ -1,27 +1,21 @@
 <?php
-function calculateScore($responses) {
-    $mapping = json_decode(file_get_contents('rules.json'), true);
-    $categories = json_decode(file_get_contents('categories.json'), true);
+function calculateScore($postData) {
+    $questions = json_decode(file_get_contents('questions.json'), true);
+    $rules = json_decode(file_get_contents('rules.json'), true);
 
     $score = 0;
-    $scores = array_fill(0, count($categories), 0); // tự động theo số lượng categories
+    $scores = [];
 
-    foreach ($mapping as $key => $values) {
+    foreach ($questions as $index => $q) {
+        $qid = $q['id'];
         $point = 0;
-        if (isset($responses[$key]) && isset($values[$responses[$key]])) {
-            $point = $values[$responses[$key]];
+        if (isset($postData[$qid]) && isset($rules[$qid][$postData[$qid]])) {
+            $point = $rules[$qid][$postData[$qid]];
             $score += $point;
         }
-        $index = intval(substr($key, 1)) - 1; 
-        if (isset($scores[$index])) {
-            $scores[$index] = $point;
-        }
+        $scores[$index] = $point;
     }
 
-    return [
-        'score' => $score,
-        'scores' => $scores,
-        'categories' => $categories
-    ];
+    return [$score, $scores];
 }
 ?>

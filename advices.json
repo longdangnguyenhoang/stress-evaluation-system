@@ -1,0 +1,26 @@
+[
+  {
+    "min": 0,
+    "max": 4,
+    "level": "Thấp",
+    "advice": "Bạn đang kiểm soát tốt công việc và sức khỏe tinh thần. Tiếp tục duy trì lịch trình ổn định, nghỉ ngơi đủ và duy trì các mối quan hệ xã hội tích cực."
+  },
+  {
+    "min": 5,
+    "max": 9,
+    "level": "Trung bình",
+    "advice": "Bạn có dấu hiệu mệt mỏi hoặc áp lực nhẹ. Nên xem lại khối lượng công việc, đảm bảo giấc ngủ và dành thời gian thư giãn hợp lý mỗi ngày."
+  },
+  {
+    "min": 10,
+    "max": 14,
+    "level": "Cao",
+    "advice": "Bạn đang gặp áp lực đáng kể. Hãy cân nhắc giảm tải công việc, chia sẻ vấn đề với người tin cậy và thực hành giảm stress."
+  },
+  {
+    "min": 15,
+    "max": 100,
+    "level": "Nguy hiểm",
+    "advice": "Mức độ stress của bạn đang ở mức nghiêm trọng. Cần tìm kiếm sự hỗ trợ từ chuyên gia tâm lý hoặc bác sĩ."
+  }
+]

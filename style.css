@@ -1,87 +1,49 @@
 body {
   font-family: 'Inter', sans-serif;
-  background: #f2f4f8;
+  background: #f8fafc;
   margin: 0;
-  padding: 0;
-  color: #333;
+  padding: 2rem;
 }
 
 .container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  max-width: 600px;
+  background: #fff;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-align: center;
+h2, h3 {
+  color: #333;
 }
 
 .intro {
-  font-size: 16px;
-  margin-bottom: 30px;
-  text-align: justify;
+  margin-bottom: 1rem;
 }
 
 .question {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
-.question label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-select {
+.select, select {
   width: 100%;
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #f9f9f9;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.submit-btn {
-  margin-top: 20px;
-  background: #2f66f6;
+.submit-btn, .btn-back {
+  background: #6366f1;
   color: white;
+  padding: 0.7rem 1.5rem;
   border: none;
-  padding: 12px 18px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.submit-btn:hover {
-  background: #1e4ed8;
-}
-
-.result-box {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.result-box h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.btn-back {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  background: #2f66f6;
-  color: #fff;
-  padding: 10px 16px;
   border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover, .btn-back:hover {
+  background: #4f46e5;
 }
